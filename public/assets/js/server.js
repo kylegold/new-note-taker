@@ -1,7 +1,7 @@
 // Bring in Node Dependencies
 const express = require('express');
 const path = require('path')
-const path = require('fs')
+const fs = require('fs')
 
 // JSON data
 let db = require('../../../db/db.json')
