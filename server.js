@@ -4,7 +4,7 @@ const path = require('path')
 const fs = require('fs')
 
 // JSON data
-let db = require('../../../db/db.json')
+let db = require('./db/db.json')
 
 // Setup Express
 const app = express();
@@ -16,12 +16,12 @@ app.use(express.json());
 
 // initial route to index.html
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../../index.html'))
+    res.sendFile(path.join(__dirname, './public/index.html'))
 })
 
 // notes route to notes.html
 app.get('/notes', (req, res) => {
-    res.sendFile(path.join(__dirname, '../../notes.html'))
+    res.sendFile(path.join(__dirname, './public/notes.html'))
 })
 
 // notes api route to return json data : GET method
